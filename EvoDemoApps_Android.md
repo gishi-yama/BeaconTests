@@ -177,9 +177,6 @@ vim platforms/android/AndroidManifest.xml
 
 ### Cordova プロジェクトのビルド
 
-
-ios, android のどちらか一方だけでもよい（開発プラットフォームに合わせる）:
-
 ```
 cordova build android
 ```
