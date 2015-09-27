@@ -55,7 +55,7 @@ source ~/.bash_profile
 
 Beaconに対応している4.3以上のSDKを追加インストールする。ここでは、テスト端末をAndroid 4.4 端末として想定し、 Android SDK 4.4.2（API19）と、Cordova5の必須環境として Android SDK 5.1.1（API22）をインストールする。
 
-SDKのインストール画面を
+SDKのインストール画面を起動する:
 
 ```
 android
