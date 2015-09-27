@@ -2,7 +2,7 @@
 
 ## はじめに
 
-ここでは、Cordova の環境を準備し、iBeaconのサンプルアプリである [Evo Demo Apps](https://github.com/divineprog/evo-demos) を動作させるまでの手順を記載する。
+ここでは、Cordova の環境を準備し、iBeaconのサンプルアプリである [Evo Demo Apps](https://github.com/divineprog/evo-demos) をAndroidで動作させるまでの手順を記載する。
 
 ## Mac
 
@@ -27,9 +27,7 @@ sudo npm install -g cordova
 
 [Android studio](https://developer.android.com/sdk/index.html) からダウンロード。
 
-- 設定項目
-  - i do not have ...
-  - default
+デフォルト設定のままインストールする。
 
 #### クラスパスの設定
 
@@ -81,6 +79,8 @@ SDKのインストール画面で、次のものを追加インストールす�
 - Extras
   - Android Support Library
   - Intel x86 Emulator Accelerator（HAXM installer）
+
+結構時間がかかる。
 
 
 ### Evo Demo Appsのダウンロード
