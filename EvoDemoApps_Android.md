@@ -2,7 +2,7 @@
 
 ## はじめに
 
-ここでは、Cordova の環境を準備し、iBeaconのサンプルアプリである [Evo Demo Apps](https://github.com/divineprog/evo-demos) をAndroidで動作させるまでの手順を記載する。
+ここでは、Cordova の環境を準備し、iBeaconのサンプルアプリである [Evo Demo Apps](https://github.com/divineprog/evo-demos) の[cordova-ibeacon](https://github.com/divineprog/evo-demos/tree/master/Demos2015/cordova-ibeacon)をAndroidで動作させるまでの手順を記載する。
 
 ## Mac
 
@@ -139,8 +139,7 @@ www フォルダの app.js を書き換える:
 vim www/app.js
 ```
 
-L34〜L45のbeacon設定のうち、UUID, major, minor を書き換える。
-※マニュアルによれば、UUIDだけでもいけるはず。
+L34〜L45のbeacon設定のうち、UUID, major, minor を書き換える。なお、[ドキュメントにあるとおり](https://github.com/divineprog/evo-demos/tree/master/Demos2015/cordova-ibeacon#quick-overview-of-how-ibeacon-ranging-and-monitoring-works)UUIDだけの記載でも動作する。
 
 検知するbeaconが１つであれば、2つある要素のうちを１つだけを有効にしてもよい。複数あれば、増やしても良い。
 
