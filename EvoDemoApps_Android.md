@@ -174,10 +174,19 @@ vim platforms/android/AndroidManifest.xml
 
 `<uses-sdk>` タグの内容（SDKVersion）をAPI19想定で書き換える:
 
-```
+```xml
 <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
 ```
 
+```
+vim platforms/android/project.properties
+```
+
+`target`の値をAPI19想定で書き換える:
+
+```properties
+target=android-19
+```
 
 ### Cordova プロジェクトのビルド
 
