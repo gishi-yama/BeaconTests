@@ -200,21 +200,37 @@ cordova build android
 
 `platforms/android/build/outputs/apk/android-debug.apk` にビルドされる。
 
-### プラットフォームへのインストール（Android）
+### プラットフォームでの動作テスト（Android）
 
-#### USBでのインストールがうまくいかない端末の場合
 
-:warning: **この設定はテスト用端末でのみ実施するか、操作完了後すぐに元に戻すこと** :warning:
+#### 端末の準備
 
-設定＞ユーザ設定＞セキュリティ＞デバイス管理＞提供不明元のアプリ を許可する
+:warning: **この設定はテスト用端末でのみ実施するか、動作テスト完了後すぐに元に戻すこと** :warning:
 
-**インストール手順**
+1. 設定＞ユーザ設定＞セキュリティ＞デバイス管理＞提供不明元のアプリ を許可する
+2. 設定＞システム＞開発者向けオプション＞USB デバッグ を許可する。
+3. 端末をUSBでPCと接続する。
+  - Windows PCの場合、ドライバのインストールが必要？
+4. USBデバッグを許可するか？という画面が表示されたら、許可する。
+
+#### テストの開始
+
+```
+cordova build android
+cordova run android --device
+```
+
+実機にアプリが表示され、操作できる。
+
+UUIDなどが一致するiBeacon端末の電源が入っていれば、接続が確認できる。
+
+#### USB経由でのテストがうまくいかない端末の場合
 
 1. ビルドされた `platforms/android/build/outputs/apk/android-debug.apk` をDropbox
 などでリンク公開する
 2. Android端末のブラウザで android-debug.apk をダウンロードする
 3. ダウンロードした android-debug.apk をインストールする
-4. アプリを起動し、iBeacon端末との接続を確認する。
+4. アプリを起動し、UUIDなどが一致するiBeacon端末との接続を確認する。
 
 ## 備考
 
