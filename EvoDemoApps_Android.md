@@ -92,6 +92,11 @@ wget -O evo-demos-master.zip https://github.com/divineprog/evo-demos/archive/mas
 unzip evo-demos-master.zip
 cd evo-demos-master/Demos2015
 ```
+フォルダ内にある既存の cordova-ieacon フォルダを移動しておく。
+
+```
+mv cordova-ibeacon cordova-ibeacon-backup
+```
 
 ### Cordova プロジェクトの作成
 
