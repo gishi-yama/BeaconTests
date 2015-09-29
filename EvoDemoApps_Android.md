@@ -166,7 +166,9 @@ cordova projectを各プラットフォーム用にコンパイルできる様�
 cordova platform add android
 ```
 
-Android の場合、Targetが最新版のSDKになっているので、4.4.2（API19）に修正する:
+Android の場合、Targetが最新版のSDKになっているので、4.4.2（API19）に修正する。
+
+1カ所目：
 
 ```
 vim platforms/android/AndroidManifest.xml
@@ -177,6 +179,8 @@ vim platforms/android/AndroidManifest.xml
 ```xml
 <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
 ```
+
+2カ所目：
 
 ```
 vim platforms/android/project.properties
