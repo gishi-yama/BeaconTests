@@ -229,15 +229,6 @@ cordova projectをiOSプラットフォーム用にコンパイルできる様�
 cordova platform add ios
 ```
 
-### Cordova プロジェクトのビルド
-
-```
-cordova build ios
-```
-
-`platforms/ios/build/emulator/iBeacon.app` にビルドされる。
-
-
 ### 動作テスト
 
 #### 端末の準備
