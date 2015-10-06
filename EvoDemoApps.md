@@ -1,11 +1,11 @@
 Evo Demo Apps の動作手順
 ======
 
-## はじめに
+## 1. はじめに
 
 ここでは、Cordova の環境を準備し、iBeaconのサンプルアプリである [Evo Demo Apps](https://github.com/divineprog/evo-demos) の[cordova-ibeacon](https://github.com/divineprog/evo-demos/tree/master/Demos2015/cordova-ibeacon)をAndroid, iOSで動作させるまでの手順を記載する。
 
-## 環境設定：OSX
+## 2. 環境設定：OSX
 
 ### git と node.js と npm をインストール
 
@@ -23,67 +23,7 @@ brew install git node npm
 sudo npm install -g cordova
 ```
 
-### Android studio のインストール
-
-
-[Android studio](https://developer.android.com/sdk/index.html) からダウンロード。
-
-デフォルト設定のままインストールする。
-
-### クラスパスの設定
-
-Android SDKのクラスパスを通す:
-
-```bash
-vim ~/.bash_profile
-```
-
-下の内容を書き込んで保存する:
-
-```
-export PATH=${PATH}:${HOME}/Library/Android/sdk/tools
-export PATH=${PATH}:${HOME}/Library/Android/sdk/platform-tools
-```
-
-クラスパス再読み込み:
-
-```
-source ~/.bash_profile
-```
-
-### Android SDKの追加
-
-Beaconに対応している4.3以上のSDKを追加インストールする。ここでは、テスト端末をAndroid 4.4 端末として想定し、 Android SDK 4.4.2（API19）と、Cordova5の必須環境として Android SDK 5.1.1（API22）をインストールする。
-
-SDKのインストール画面を起動する:
-
-```
-android
-```
-
-SDKのインストール画面で、次のものを追加インストールする。API22は最新版のCordovaで必要。
-
-- Android 6.0（API23）
-  - Intel x86 Atom System Image
-- Android 5.1.1（API22）
-  - SDK Platform
-  - Intel x86 Atom System Image
-  - Google APIs
-  - Google APIs (X86 System Image）
-  - Sources for Android SDK
-- Android 4.4.2（API19）
-  - SDK Platform
-  - Intel x86 Atom System Image
-  - Google APIs (X86 System Image）
-  - Sources for Android SDK
-- Extras
-  - Android Support Library
-  - Intel x86 Emulator Accelerator（HAXM installer）
-
-結構時間がかかる。
-
-
-## Evo Demo Appsのダウンロードと実行
+## 3. Evo Demo Appsのダウンロードと編集
 
 [Evo Demo Apps](https://github.com/divineprog/evo-demos) をzipダウンロードして、展開する:
 
@@ -156,9 +96,68 @@ cordova plugin add https://github.com/petermetz/cordova-plugin-ibeacon
 cordova plugin add https://github.com/katzer/cordova-plugin-local-notifications
 ```
 
-## Android：プラットフォーム設定とテスト
+## 4. プラットフォーム設定とテスト：Android
 
-### プラットフォームの追加と設定
+### Android studio のインストール
+
+
+[Android studio](https://developer.android.com/sdk/index.html) からダウンロード。
+
+デフォルト設定のままインストールする。
+
+### クラスパスの設定
+
+Android SDKのクラスパスを通す:
+
+```bash
+vim ~/.bash_profile
+```
+
+下の内容を書き込んで保存する:
+
+```
+export PATH=${PATH}:${HOME}/Library/Android/sdk/tools
+export PATH=${PATH}:${HOME}/Library/Android/sdk/platform-tools
+```
+
+クラスパス再読み込み:
+
+```
+source ~/.bash_profile
+```
+
+### Android SDKの追加
+
+Beaconに対応している4.3以上のSDKを追加インストールする。ここでは、テスト端末をAndroid 4.4 端末として想定し、 Android SDK 4.4.2（API19）と、Cordova5の必須環境として Android SDK 5.1.1（API22）をインストールする。
+
+SDKのインストール画面を起動する:
+
+```
+android
+```
+
+SDKのインストール画面で、次のものを追加インストールする。API22は最新版のCordovaで必要。
+
+- Android 6.0（API23）
+- Intel x86 Atom System Image
+- Android 5.1.1（API22）
+- SDK Platform
+- Intel x86 Atom System Image
+- Google APIs
+- Google APIs (X86 System Image）
+- Sources for Android SDK
+- Android 4.4.2（API19）
+- SDK Platform
+- Intel x86 Atom System Image
+- Google APIs (X86 System Image）
+- Sources for Android SDK
+- Extras
+- Android Support Library
+- Intel x86 Emulator Accelerator（HAXM installer）
+
+結構時間がかかる。
+
+### CordovaのAndroidプラットフォームの追加と設定
 
 cordova projectをAndroidプラットフォーム用にコンパイルできる様にする:
 
@@ -218,8 +217,7 @@ UUIDなどが一致するiBeacon端末の電源が入っていれば、接続が
 4. アプリを起動し、UUIDなどが一致するiBeacon端末との接続を確認する。
 
 
-## iOS：プラットフォーム設定とテスト
-
+## 5. プラットフォーム設定とテスト：iOS
 
 ### プラットフォームの追加と設定
 
@@ -288,7 +286,7 @@ UUIDなどが一致するiBeacon端末の電源が入っていれば、接続が
 :warning: **不要になったら、プロファイルは削除しておくこと。** :warning:
 
 
-## 備考
+## 6. 備考
 
 ### ibeaconのテスト
 
