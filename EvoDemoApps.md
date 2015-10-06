@@ -23,7 +23,7 @@ brew install git node npm
 sudo npm install -g cordova
 ```
 
-## 3. Evo Demo Appsのダウンロードと編集
+## 3. Evo Demo Appsのダウンロード
 
 [Evo Demo Apps](https://github.com/divineprog/evo-demos) をzipダウンロードして、展開する:
 
@@ -38,7 +38,9 @@ cd evo-demos-master/Demos2015
 mv cordova-ibeacon cordova-ibeacon-backup
 ```
 
-### Cordova プロジェクトの作成
+## 4. Cordova プロジェクトの準備
+
+### プロジェクトの作成
 
 まず、cordova コマンドで作成する:
 
@@ -96,7 +98,7 @@ cordova plugin add https://github.com/petermetz/cordova-plugin-ibeacon
 cordova plugin add https://github.com/katzer/cordova-plugin-local-notifications
 ```
 
-## 4. プラットフォーム設定とテスト：Android
+## 5. プラットフォーム設定とテスト：Android
 
 ### Android studio のインストール
 
@@ -217,7 +219,7 @@ UUIDなどが一致するiBeacon端末の電源が入っていれば、接続が
 4. アプリを起動し、UUIDなどが一致するiBeacon端末との接続を確認する。
 
 
-## 5. プラットフォーム設定とテスト：iOS
+## 6. プラットフォーム設定とテスト：iOS
 
 ### プラットフォームの追加と設定
 
@@ -286,7 +288,7 @@ UUIDなどが一致するiBeacon端末の電源が入っていれば、接続が
 :warning: **不要になったら、プロファイルは削除しておくこと。** :warning:
 
 
-## 6. 備考
+## 7. 備考
 
 ### ibeaconのテスト
 
