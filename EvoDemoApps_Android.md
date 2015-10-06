@@ -168,7 +168,6 @@ cordova platform add android
 
 Android の場合、Targetが最新版のSDKになっているので、4.4.2（API19）に修正する。
 
-1カ所目：
 
 ```
 vim platforms/android/AndroidManifest.xml
@@ -178,18 +177,6 @@ vim platforms/android/AndroidManifest.xml
 
 ```xml
 <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19" />
-```
-
-2カ所目：
-
-```
-vim platforms/android/project.properties
-```
-
-`target`の値をAPI19想定で書き換える:
-
-```properties
-target=android-19
 ```
 
 ### Cordova プロジェクトのビルド
